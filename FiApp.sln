@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoApp.BL", "FoApp.BL\FoApp.BL.csproj", "{F89E69D4-2719-404F-ABD6-6C9167D7C0EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoApp.BL", "FoApp.BL\FoApp.BL.csproj", "{F89E69D4-2719-404F-ABD6-6C9167D7C0EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiApp.CMD", "FiApp.CMD\FiApp.CMD.csproj", "{F9A83FF9-8BC7-472E-8543-26394D3FB34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiApp.CMD", "FiApp.CMD\FiApp.CMD.csproj", "{F9A83FF9-8BC7-472E-8543-26394D3FB34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoApp.BLTests", "FoApp.BLTests\FoApp.BLTests.csproj", "{1CD60B6A-8586-4B00-8F60-00E8A6607A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F9A83FF9-8BC7-472E-8543-26394D3FB34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9A83FF9-8BC7-472E-8543-26394D3FB34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9A83FF9-8BC7-472E-8543-26394D3FB34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD60B6A-8586-4B00-8F60-00E8A6607A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD60B6A-8586-4B00-8F60-00E8A6607A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD60B6A-8586-4B00-8F60-00E8A6607A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD60B6A-8586-4B00-8F60-00E8A6607A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
