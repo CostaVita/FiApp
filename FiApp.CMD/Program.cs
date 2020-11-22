@@ -10,20 +10,60 @@ namespace FiApp.CMD
 			Console.WriteLine("Имя пользователя:");
 			var name = Console.ReadLine();
 
-			Console.WriteLine("Пол:");
-			var gender = Console.ReadLine();
+			var userController = new UserController(name);
+			if (userController.IsNewUser)
+			{
+				Console.WriteLine("Вы новый пользователь");
+				Console.WriteLine("Пол: ");
+				var gender = Console.ReadLine();
 
-			Console.WriteLine("Дата рождения:");
-			var birthDate = DateTime.Parse(Console.ReadLine()); //todo в try parse
+				DateTime birthDate = ParseDate();
+				double weight = ParseDouble("Вес");
+				double height = ParseDouble("Рост");
 
-			Console.WriteLine("Вес:");
-			var weight = double.Parse(Console.ReadLine()); 
+				userController.SetNewUserData(gender, birthDate, weight, height);
+			}
 
-			Console.WriteLine("Рост:");
-			var height = double.Parse(Console.ReadLine());
+			Console.WriteLine(userController.CurrentUser.ToString());
+			Console.ReadKey();
+		}
 
-			var userController = new UserController(name, gender, birthDate, weight, height);
-			userController.Save();
+		private static DateTime ParseDate()
+		{
+			DateTime birthDate;
+			while (true)
+			{
+				Console.WriteLine("Дата рождения:");
+				if (DateTime.TryParse(Console.ReadLine(), out birthDate))
+				{
+					break;
+				}
+				else
+				{
+					Console.WriteLine("Кривая дата");
+				}
+			}
+
+			return birthDate;
+		}
+
+		public static double ParseDouble(string name)
+		{
+			double value;
+			while (true)
+			{
+				Console.WriteLine($"Введите {name}:");
+				if (double.TryParse(Console.ReadLine(), out value))
+				{
+					break;
+				}
+				else
+				{
+					Console.WriteLine($"Кривые данные для {name}");
+				}
+			}
+
+			return value;
 		}
 	}
 }
